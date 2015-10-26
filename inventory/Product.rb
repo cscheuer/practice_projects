@@ -19,5 +19,5 @@ class Product
 	end
 	def update(feature, value)
 		@product_info[feature] = value
-	end
+	end 
 end
