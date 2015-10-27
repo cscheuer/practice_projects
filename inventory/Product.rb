@@ -21,3 +21,20 @@ class Product
 		@product_info[feature] = value
 	end 
 end
+
+class Perishable < Product
+	def expiration_date(date)
+		@product_info[:expiration] = date
+	end
+	def is_expired?
+		unless @product_info[:expiration] == nil
+			if @product_info[:expiration] < Date.today.to_s
+				return true
+			else
+				return false
+			end
+		else
+			puts "No expiration date specified for #{@product_info[:name]}"
+		end
+	end
+end
