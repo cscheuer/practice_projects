@@ -13,4 +13,13 @@ class Inventory
 		end
 		puts @total_value
 	end
+	def summary
+		@inventory.each do |product|
+			if product.product_info[:quantity] == 1
+				puts "There is #{product.product_info[:quantity]} #{product.product_info[:name]} (ID: #{product.product_info[:id]}), selling for #{product.product_info[:price]} a piece"
+			else
+				puts "There are #{product.product_info[:quantity]} #{product.product_info[:name]}s (ID: #{product.product_info[:id]}), selling for #{product.product_info[:price]} a piece"
+			end
+		end
+	end
 end
