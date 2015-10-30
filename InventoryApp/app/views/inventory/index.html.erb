@@ -1,2 +1,16 @@
-<h1>Inventory#index</h1>
-<p>Find me in app/views/inventory/index.html.erb</p>
+<h1>Current inventory</h1>
+
+<table>
+	<tr>
+		<th>Product Name</th>
+		<th>Quantity</th>
+		<th>Price</th>
+	</tr>
+	<% @products.each do |product| %>
+	<tr>
+		<td><%= product.name %></td>
+		<td><%= product.quantity %></td>
+		<td><%= product.price %></td>
+	</tr>
+	<% end %>
+</table>

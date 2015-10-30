@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/' => 'inventory#index'
+  get '/products' => 'inventory#index'
 
   resources :products
 
